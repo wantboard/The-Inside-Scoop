@@ -16,11 +16,6 @@ def index():
   return send_from_directory('public', 'index.html')
 
 
-@app.route('/new', methods=['POST', 'GET'])
-def new():
-  "hey there!"
-
-
 @app.route('/ask', methods=['POST'])
 def ask():
   # Get message from request body

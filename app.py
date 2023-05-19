@@ -27,8 +27,8 @@ def ask():
   print("Message: " + str(last_message))
   answer = answer_question(last_message)
   print("Answer: " + str(answer))
+  print("Answer: " + str(answer.get_formatted_sources))
   return str(answer)
-
 
 @app.errorhandler(Exception)
 def error(e):

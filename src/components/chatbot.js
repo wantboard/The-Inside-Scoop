@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  useEffect(scrollToBottom, [messages]);
 
   const sendMessage = async () => {
     if (input.trim() === '') return;
@@ -29,6 +37,7 @@ const Chatbot = () => {
             {message.text}
           </div>
         ))}
+        <div ref={messagesEndRef} />
       </div>
       <div className="input-area">
         <input
@@ -36,6 +45,7 @@ const Chatbot = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
+          placeholder="Type a message..."
         />
         <button onClick={sendMessage}>Send</button>
       </div>
@@ -44,3 +54,4 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
+

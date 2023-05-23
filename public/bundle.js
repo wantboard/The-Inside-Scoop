@@ -17,7 +17,7 @@
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: Arial, sans-serif;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  background-color: #ffffff;\n  color: #000000;\n  transition: all 0.3s ease;\n}\n\nbody.dark {\n  background-color: #1c1c1c;\n  color: #ffffff;\n}\n\n.chatbot {\n  border: 1px solid #ccc;\n  border-radius: 5px;\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  max-width: 400px;\n  height: 500px;\n}\n\n.messages {\n  flex-grow: 1;\n  overflow-y: auto;\n  padding: 10px;\n  background-color: #f5f5f5;\n}\n\nbody.dark .messages {\n  background-color: #2c2c2c;\n}\n\n.message {\n  margin-bottom: 10px;\n  line-height: 1.4;\n  word-wrap: break-word;\n}\n\n.message.user {\n  align-self: flex-end;\n  background-color: #007bff;\n  color: #ffffff;\n  padding: 5px 10px;\n  border-radius: 10px 10px 0 10px;\n}\n\n.message.bot {\n  align-self: flex-start;\n  background-color: #e9e9e9;\n  color: #000000;\n  padding: 5px 10px;\n  border-radius: 10px 10px 10px 0;\n}\n\nbody.dark .message.bot {\n  background-color: #3d3d3d;\n  color: #ffffff;\n}\n\n.input-area {\n  display: flex;\n  padding: 5px;\n  border-top: 1px solid #ccc;\n}\n\n.input-area input {\n  flex-grow: 1;\n  border: none;\n  border-radius: 5px;\n  padding: 5px;\n  outline: none;\n}\n\n.input-area button {\n  background-color: #007bff;\n  color: #ffffff;\n  border: none;\n  border-radius: 5px;\n  padding: 5px 10px;\n  margin-left: 5px;\n  cursor: pointer;\n}\n\nbody.dark .input-area button {\n  background-color: #3d3d3d;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  background-color: #F5F5F5;\n  color: #333;\n}\n\n.chatbot {\n  border-radius: 15px;\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n  width: 600px;  /* set the initial width */\n  max-width: 600px;\n  height: 600px;\n  background: #ffffff;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n}\n\n@media (max-width: 600px) {\n  .chatbot {\n    width: 80%;  /* adjust width for smaller screens */\n  }\n}\n\n\n.messages {\n  flex-grow: 1;\n  overflow-y: scroll;\n  padding: 20px;\n  background-color: #ffffff;\n}\n\n.message {\n  margin-bottom: 10px;\n  line-height: 1.6;\n  word-wrap: break-word;\n  font-size: 16px;\n}\n\n.message.user {\n  align-self: flex-end;\n  background-color: #0084FF;\n  color: #ffffff;\n  padding: 10px 15px;\n  border-radius: 15px 15px 3px 15px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n}\n\n.message.bot {\n  align-self: flex-start;\n  background-color: #E8E8E8;\n  color: #000000;\n  padding: 10px 15px;\n  border-radius: 15px 15px 15px 3px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n  margin-top: 10px;\n}\n\n.input-area {\n  display: flex;\n  padding: 10px;\n  border-top: 1px solid #E8E8E8;\n  background-color: #F5F5F5;\n}\n\n.input-area input {\n  flex-grow: 1;\n  border: none;\n  border-radius: 15px;\n  padding: 10px;\n  outline: none;\n  margin-right: 10px;\n}\n\n.input-area button {\n  background-color: #0084FF;\n  color: #ffffff;\n  border: none;\n  border-radius: 15px;\n  padding: 10px 20px;\n  cursor: pointer;\n  font-size: 16px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4370,6 +4370,14 @@ var Chatbot = function Chatbot() {
     _useState4 = _slicedToArray(_useState3, 2),
     input = _useState4[0],
     setInput = _useState4[1];
+  var messagesEndRef = (0,react.useRef)(null);
+  var scrollToBottom = function scrollToBottom() {
+    var _messagesEndRef$curre;
+    (_messagesEndRef$curre = messagesEndRef.current) === null || _messagesEndRef$curre === void 0 ? void 0 : _messagesEndRef$curre.scrollIntoView({
+      behavior: "smooth"
+    });
+  };
+  (0,react.useEffect)(scrollToBottom, [messages]);
   var sendMessage = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
       var newMessages, response, botMessage;
@@ -4429,6 +4437,8 @@ var Chatbot = function Chatbot() {
       key: index,
       className: "message ".concat(message.sender)
     }, message.text);
+  }), /*#__PURE__*/react.createElement("div", {
+    ref: messagesEndRef
   })), /*#__PURE__*/react.createElement("div", {
     className: "input-area"
   }, /*#__PURE__*/react.createElement("input", {
@@ -4439,7 +4449,8 @@ var Chatbot = function Chatbot() {
     },
     onKeyPress: function onKeyPress(e) {
       return e.key === 'Enter' && sendMessage();
-    }
+    },
+    placeholder: "Type a message..."
   }), /*#__PURE__*/react.createElement("button", {
     onClick: sendMessage
   }, "Send")));

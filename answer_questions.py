@@ -11,10 +11,10 @@ GPT4_llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-
 service_context = ServiceContext.from_defaults(llm_predictor=GPT4_llm_predictor, chunk_size_limit=1024)
 
 
-def answer_question(query):
+def answer_question(query, restaurant):
   
   index = load_index_from_storage(
-    StorageContext.from_defaults(persist_dir="storage"), service_context=service_context)
+    StorageContext.from_defaults(persist_dir=f"storage/{restaurant}.txt"), service_context=service_context)
 
   # configure retriever
   retriever = VectorIndexRetriever(
@@ -42,8 +42,9 @@ def answer_question(query):
 
 def answer_questions():
   while True:
+    restaurant = input("Select a restaurant: ")
     query = input("Ask a question: ")
     if query == "quit":
       break
-    response = answer_question(query)
+    response = answer_question(query, restaurant)
     print(response)

@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory, redirect, url_for
+from flask import Flask, request, send_from_directory
 import json
 from answer_questions import answer_question
 
@@ -20,15 +20,18 @@ def index():
 def ask():
   # Get message from request body
   data = json.loads(request.data)
-  print("Data: " + str(request.data))
-  # Extract transcript and promptType from data
+  
+  # Extract transcript and restaurant from data
   transcript = data['transcript']
+  restaurant = data['restaurant']
+  
   last_message = transcript[-1]["text"]
-  print("Message: " + str(last_message))
-  answer = answer_question(last_message)
-  print("Answer: " + str(answer))
-  print("Answer: " + str(answer.get_formatted_sources))
+  
+  # Call the answer_question function with last_message and restaurant as arguments
+  answer = answer_question(last_message, restaurant)
+  
   return str(answer)
+
 
 @app.errorhandler(Exception)
 def error(e):

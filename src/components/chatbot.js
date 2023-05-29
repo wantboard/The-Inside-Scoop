@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
+const suggestedQuestions = [
+  { display: "Most popular dishes", query: "What are the most popular dishes?" },
+  { display: "Where to sit", query: "Where's the best table?" },
+  { display: "Dishes to avoid", query: "What dishes should I avoid?" },
+  { display: "Dress code", query: "What's the dress code?" },
+];
+
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
@@ -32,11 +39,23 @@ const Chatbot = () => {
 
   return (
     <div className="chatbot">
+      <label className="label">Select a restaurant</label>
       <select className="select-restaurant" onChange={(e) => setSelectedRestaurant(e.target.value)}>
         <option value="Alder">Alder</option>
         <option value="Gusto101">Gusto 101</option>
         {/* Add more options as necessary */}
       </select>
+      
+      <div className="suggested-questions">
+        {suggestedQuestions.map((question, index) => (
+          <button key={index} className="suggested-question" onClick={() => {
+            setInput(question.query);
+            sendMessage();
+          }}>
+            {question.display}
+          </button>
+        ))}
+      </div>
       <div className="messages">
         {messages.map((message, index) => (
           <div key={index} className={`message ${message.sender}`}>

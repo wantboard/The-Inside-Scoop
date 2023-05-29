@@ -4,6 +4,7 @@ import axios from 'axios';
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const [selectedRestaurant, setSelectedRestaurant] = useState('Alder');
 
   const messagesEndRef = useRef(null);
 
@@ -21,7 +22,7 @@ const Chatbot = () => {
     setInput('');
 
     try {
-      const response = await axios.post('/ask', { transcript: newMessages }, { withCredentials: true });
+      const response = await axios.post('/ask', { restaurant: selectedRestaurant, transcript: newMessages }, { withCredentials: true });
       const botMessage = response.data;
       setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: botMessage }]);
     } catch (error) {
@@ -31,6 +32,11 @@ const Chatbot = () => {
 
   return (
     <div className="chatbot">
+      <select className="select-restaurant" onChange={(e) => setSelectedRestaurant(e.target.value)}>
+        <option value="Alder">Alder</option>
+        <option value="Gusto101">Gusto 101</option>
+        {/* Add more options as necessary */}
+      </select>
       <div className="messages">
         {messages.map((message, index) => (
           <div key={index} className={`message ${message.sender}`}>
@@ -54,4 +60,3 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
-

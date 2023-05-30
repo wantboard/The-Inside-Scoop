@@ -4378,6 +4378,43 @@ var suggestedQuestions = [{
   display: "Tips",
   query: "What are some tips and secrets about {restaurant}?"
 }];
+var restaurants = [{
+  value: "Alder",
+  display: "Alder"
+}, {
+  value: "BarRaval",
+  display: "Bar Raval"
+}, {
+  value: "Black+Blue",
+  display: "Black + Blue"
+}, {
+  value: "CurryishTavern",
+  display: "Curryish Tavern"
+}, {
+  value: "Edulis",
+  display: "Edulis"
+}, {
+  value: "FamigliaBaldassarre",
+  display: "Famiglia Baldassarre"
+}, {
+  value: "FishmanLobsterClubhouseRestaurant",
+  display: "Fishman Lobster Clubhouse Restaurant"
+}, {
+  value: "MimiChinese",
+  display: "MIMI Chinese"
+}, {
+  value: "PrimeSeafoodPalace",
+  display: "Prime Seafood Palace"
+}, {
+  value: "Quetzal",
+  display: "Quetzal"
+}, {
+  value: "RamenButaNibo",
+  display: "Ramen Buta-Nibo"
+}
+// Add more options as necessary
+];
+
 var Chatbot = function Chatbot() {
   var _useState = (0,react.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
@@ -4387,7 +4424,7 @@ var Chatbot = function Chatbot() {
     _useState4 = _slicedToArray(_useState3, 2),
     input = _useState4[0],
     setInput = _useState4[1];
-  var _useState5 = (0,react.useState)('Alder'),
+  var _useState5 = (0,react.useState)(restaurants[0]),
     _useState6 = _slicedToArray(_useState5, 2),
     selectedRestaurant = _useState6[0],
     setSelectedRestaurant = _useState6[1];
@@ -4420,7 +4457,7 @@ var Chatbot = function Chatbot() {
             _context.prev = 5;
             _context.next = 8;
             return lib_axios.post('/ask', {
-              restaurant: selectedRestaurant,
+              restaurant: selectedRestaurant.value,
               transcript: newMessages
             }, {
               withCredentials: true
@@ -4459,38 +4496,23 @@ var Chatbot = function Chatbot() {
   }, "Select a Restaurant"), /*#__PURE__*/react.createElement("select", {
     className: "select-restaurant",
     onChange: function onChange(e) {
-      return setSelectedRestaurant(e.target.value);
+      return setSelectedRestaurant(restaurants.find(function (restaurant) {
+        return restaurant.value === e.target.value;
+      }));
     }
-  }, /*#__PURE__*/react.createElement("option", {
-    value: "Alder"
-  }, "Alder"), /*#__PURE__*/react.createElement("option", {
-    value: "BarRaval"
-  }, "Bar Raval"), /*#__PURE__*/react.createElement("option", {
-    value: "Black+Blue"
-  }, "Black + Blue"), /*#__PURE__*/react.createElement("option", {
-    value: "CurryishTavern"
-  }, "Curryish Tavern"), /*#__PURE__*/react.createElement("option", {
-    value: "Edulis"
-  }, "Edulis"), /*#__PURE__*/react.createElement("option", {
-    value: "FamigliaBaldassarre"
-  }, "Famiglia Baldassarre"), /*#__PURE__*/react.createElement("option", {
-    value: "FishmanLobsterClubhouseRestaurant"
-  }, "Fishman Lobster Clubhouse Restaurant"), /*#__PURE__*/react.createElement("option", {
-    value: "MimiChinese"
-  }, "MIMI Chinese"), /*#__PURE__*/react.createElement("option", {
-    value: "PrimeSeafoodPalace"
-  }, "Prime Seafood Palace"), /*#__PURE__*/react.createElement("option", {
-    value: "Quetzal"
-  }, "Quetzal"), /*#__PURE__*/react.createElement("option", {
-    value: "RamenButaNibo"
-  }, "Ramen Buta-Nibo")), /*#__PURE__*/react.createElement("div", {
+  }, restaurants.map(function (restaurant, index) {
+    return /*#__PURE__*/react.createElement("option", {
+      key: index,
+      value: restaurant.value
+    }, restaurant.display);
+  })), /*#__PURE__*/react.createElement("div", {
     className: "suggested-questions"
   }, suggestedQuestions.map(function (question, index) {
     return /*#__PURE__*/react.createElement("button", {
       key: index,
       className: "suggested-question",
       onClick: function onClick() {
-        var modifiedQuery = question.query.replace('{restaurant}', selectedRestaurant);
+        var modifiedQuery = question.query.replace('{restaurant}', selectedRestaurant.display);
         setInput(modifiedQuery);
         sendMessage();
       }
@@ -4517,7 +4539,7 @@ var Chatbot = function Chatbot() {
     onKeyPress: function onKeyPress(e) {
       return e.key === 'Enter' && sendMessage();
     },
-    placeholder: "Ask a question about ".concat(selectedRestaurant, " . . .")
+    placeholder: "Ask a question about ".concat(selectedRestaurant.display, " . . .")
   }), /*#__PURE__*/react.createElement("button", {
     onClick: sendMessage
   }, /*#__PURE__*/react.createElement("i", {

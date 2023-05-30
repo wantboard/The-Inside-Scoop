@@ -9,10 +9,25 @@ const suggestedQuestions = [
   { display: "Tips", query: "What are some tips and secrets about {restaurant}?" },  
 ];
 
+const restaurants = [
+  { value: "Alder", display: "Alder" },
+  { value: "BarRaval", display: "Bar Raval" },
+  { value: "Black+Blue", display: "Black + Blue" },
+  { value: "CurryishTavern", display: "Curryish Tavern" },
+  { value: "Edulis", display: "Edulis" },
+  { value: "FamigliaBaldassarre", display: "Famiglia Baldassarre" },
+  { value: "FishmanLobsterClubhouseRestaurant", display: "Fishman Lobster Clubhouse Restaurant" },
+  { value: "MimiChinese", display: "MIMI Chinese" },
+  { value: "PrimeSeafoodPalace", display: "Prime Seafood Palace" },
+  { value: "Quetzal", display: "Quetzal" },
+  { value: "RamenButaNibo", display: "Ramen Buta-Nibo" }
+  // Add more options as necessary
+];
+
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
-  const [selectedRestaurant, setSelectedRestaurant] = useState('Alder');
+  const [selectedRestaurant, setSelectedRestaurant] = useState(restaurants[0]);
 
   const messagesEndRef = useRef(null);
 
@@ -30,7 +45,7 @@ const Chatbot = () => {
     setInput('');
 
     try {
-      const response = await axios.post('/ask', { restaurant: selectedRestaurant, transcript: newMessages }, { withCredentials: true });
+      const response = await axios.post('/ask', { restaurant: selectedRestaurant.value, transcript: newMessages }, { withCredentials: true });
       const botMessage = response.data;
       setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: botMessage }]);
     } catch (error) {
@@ -44,25 +59,16 @@ const Chatbot = () => {
         <h1>The Inside Scoop</h1>
       </div>
       <label className="label">Select a Restaurant</label>
-      <select className="select-restaurant" onChange={(e) => setSelectedRestaurant(e.target.value)}>
-        <option value="Alder">Alder</option>
-        <option value="BarRaval">Bar Raval</option>
-        <option value="Black+Blue">Black + Blue</option>
-        <option value="CurryishTavern">Curryish Tavern</option>
-        <option value="Edulis">Edulis</option>
-        <option value="FamigliaBaldassarre">Famiglia Baldassarre</option>
-        <option value="FishmanLobsterClubhouseRestaurant">Fishman Lobster Clubhouse Restaurant</option>
-        <option value="MimiChinese">MIMI Chinese</option>
-        <option value="PrimeSeafoodPalace">Prime Seafood Palace</option>
-        <option value="Quetzal">Quetzal</option>
-        <option value="RamenButaNibo">Ramen Buta-Nibo</option>
-        {/* Add more options as necessary */}
+      <select className="select-restaurant" onChange={(e) => setSelectedRestaurant(restaurants.find(restaurant => restaurant.value === e.target.value))}>
+        {restaurants.map((restaurant, index) => (
+          <option key={index} value={restaurant.value}>{restaurant.display}</option>
+        ))}
       </select>
       
       <div className="suggested-questions">
         {suggestedQuestions.map((question, index) => (
           <button key={index} className="suggested-question" onClick={() => {
-            const modifiedQuery = question.query.replace('{restaurant}', selectedRestaurant);
+            const modifiedQuery = question.query.replace('{restaurant}', selectedRestaurant.display);
             setInput(modifiedQuery);
             sendMessage();
           }}>
@@ -89,11 +95,11 @@ const Chatbot = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
-          placeholder={`Ask a question about ${selectedRestaurant} . . .`}
+          placeholder={`Ask a question about ${selectedRestaurant.display} . . .`}
         />
         <button onClick={sendMessage}>
-  <i className="material-icons">send</i>
-</button>
+          <i className="material-icons">send</i>
+        </button>
       </div>
     </div>
   );

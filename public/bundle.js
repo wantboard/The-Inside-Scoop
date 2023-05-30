@@ -4464,8 +4464,26 @@ var Chatbot = function Chatbot() {
   }, /*#__PURE__*/react.createElement("option", {
     value: "Alder"
   }, "Alder"), /*#__PURE__*/react.createElement("option", {
-    value: "Gusto101"
-  }, "Gusto 101")), /*#__PURE__*/react.createElement("div", {
+    value: "BarRaval"
+  }, "Bar Raval"), /*#__PURE__*/react.createElement("option", {
+    value: "Black+Blue"
+  }, "Black + Blue"), /*#__PURE__*/react.createElement("option", {
+    value: "CurryishTavern"
+  }, "Curryish Tavern"), /*#__PURE__*/react.createElement("option", {
+    value: "Edulis"
+  }, "Edulis"), /*#__PURE__*/react.createElement("option", {
+    value: "FamigliaBaldassarre"
+  }, "Famiglia Baldassarre"), /*#__PURE__*/react.createElement("option", {
+    value: "FishmanLobsterClubhouseRestaurant"
+  }, "Fishman Lobster Clubhouse Restaurant"), /*#__PURE__*/react.createElement("option", {
+    value: "MimiChinese"
+  }, "MIMI Chinese"), /*#__PURE__*/react.createElement("option", {
+    value: "PrimeSeafoodPalace"
+  }, "Prime Seafood Palace"), /*#__PURE__*/react.createElement("option", {
+    value: "Quetzal"
+  }, "Quetzal"), /*#__PURE__*/react.createElement("option", {
+    value: "RamenButaNibo"
+  }, "Ramen Buta-Nibo")), /*#__PURE__*/react.createElement("div", {
     className: "suggested-questions"
   }, suggestedQuestions.map(function (question, index) {
     return /*#__PURE__*/react.createElement("button", {

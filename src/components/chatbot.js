@@ -46,7 +46,16 @@ const Chatbot = () => {
       <label className="label">Select a Restaurant</label>
       <select className="select-restaurant" onChange={(e) => setSelectedRestaurant(e.target.value)}>
         <option value="Alder">Alder</option>
-        <option value="Gusto101">Gusto 101</option>
+        <option value="BarRaval">Bar Raval</option>
+        <option value="Black+Blue">Black + Blue</option>
+        <option value="CurryishTavern">Curryish Tavern</option>
+        <option value="Edulis">Edulis</option>
+        <option value="FamigliaBaldassarre">Famiglia Baldassarre</option>
+        <option value="FishmanLobsterClubhouseRestaurant">Fishman Lobster Clubhouse Restaurant</option>
+        <option value="MimiChinese">MIMI Chinese</option>
+        <option value="PrimeSeafoodPalace">Prime Seafood Palace</option>
+        <option value="Quetzal">Quetzal</option>
+        <option value="RamenButaNibo">Ramen Buta-Nibo</option>
         {/* Add more options as necessary */}
       </select>
       

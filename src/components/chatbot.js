@@ -17,6 +17,7 @@ const restaurants = [
   { value: "Edulis", display: "Edulis" },
   { value: "FamigliaBaldassarre", display: "Famiglia Baldassarre" },
   { value: "FishmanLobsterClubhouseRestaurant", display: "Fishman Lobster Clubhouse Restaurant" },
+  { value: "Gusto101", display: "Gusto 101" },
   { value: "MimiChinese", display: "MIMI Chinese" },
   { value: "PrimeSeafoodPalace", display: "Prime Seafood Palace" },
   { value: "Quetzal", display: "Quetzal" },

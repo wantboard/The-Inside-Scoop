@@ -7,8 +7,8 @@ from langchain.chat_models import ChatOpenAI
 
 
 # define LLM
-GPT4_llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-4-0314"))
-service_context = ServiceContext.from_defaults(llm_predictor=GPT4_llm_predictor, chunk_size_limit=1024)
+llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-4"))
+service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
 
 
 def answer_question(query, restaurant):

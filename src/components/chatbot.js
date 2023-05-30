@@ -40,7 +40,10 @@ const Chatbot = () => {
 
   return (
     <div className="chatbot">
-      <label className="label">Select a restaurant</label>
+      <div className="header">
+        <h1>The Inside Scoop</h1>
+      </div>
+      <label className="label">Restaurant</label>
       <select className="select-restaurant" onChange={(e) => setSelectedRestaurant(e.target.value)}>
         <option value="Alder">Alder</option>
         <option value="Gusto101">Gusto 101</option>

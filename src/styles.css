@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 * {
   box-sizing: border-box;
 }
+
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -152,3 +155,13 @@ body {
   font-size: 16px;
   color: #333;
 }
+
+.header {
+  background-color: #324666;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 2px;
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+}
+

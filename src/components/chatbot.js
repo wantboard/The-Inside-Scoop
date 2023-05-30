@@ -43,7 +43,7 @@ const Chatbot = () => {
       <div className="header">
         <h1>The Inside Scoop</h1>
       </div>
-      <label className="label">Restaurant</label>
+      <label className="label">Select a Restaurant</label>
       <select className="select-restaurant" onChange={(e) => setSelectedRestaurant(e.target.value)}>
         <option value="Alder">Alder</option>
         <option value="Gusto101">Gusto 101</option>
@@ -80,9 +80,11 @@ const Chatbot = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
-          placeholder="Type a message..."
+          placeholder={`Ask a question about ${selectedRestaurant} . . .`}
         />
-        <button onClick={sendMessage}>Send</button>
+        <button onClick={sendMessage}>
+  <i className="material-icons">send</i>
+</button>
       </div>
     </div>
   );

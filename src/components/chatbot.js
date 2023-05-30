@@ -2,10 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 const suggestedQuestions = [
-  { display: "Most popular dishes", query: "What are the most popular dishes?" },
-  { display: "Where to sit", query: "Where's the best table?" },
-  { display: "Dishes to avoid", query: "What dishes should I avoid?" },
-  { display: "Dress code", query: "What's the dress code?" },
+  { display: "Best dishes", query: "What are the best dishes at {restaurant}?" },
+  { display: "Dishes to avoid", query: "What dishes should I avoid at {restaurant}?" },
+  { display: "Where to sit", query: "Where's the best table at {restaurant}?" },
+  { display: "Dress code", query: "What's the dress code at {restaurant}?" },
+  { display: "Tips", query: "What are some tips and secrets about {restaurant}?" },  
 ];
 
 const Chatbot = () => {
@@ -49,21 +50,27 @@ const Chatbot = () => {
       <div className="suggested-questions">
         {suggestedQuestions.map((question, index) => (
           <button key={index} className="suggested-question" onClick={() => {
-            setInput(question.query);
+            const modifiedQuery = question.query.replace('{restaurant}', selectedRestaurant);
+            setInput(modifiedQuery);
             sendMessage();
           }}>
             {question.display}
           </button>
         ))}
       </div>
+      
       <div className="messages">
         {messages.map((message, index) => (
-          <div key={index} className={`message ${message.sender}`}>
-            {message.text}
+          <div key={index} className={`message-container ${message.sender}`}>
+            <div className={`message ${message.sender}`}>
+              {message.text}
+            </div>
           </div>
         ))}
         <div ref={messagesEndRef} />
       </div>
+
+      
       <div className="input-area">
         <input
           type="text"

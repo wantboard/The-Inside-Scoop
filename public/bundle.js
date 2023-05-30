@@ -17,7 +17,7 @@
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  background-color: #F5F5F5;\n  color: #333;\n}\n\n.chatbot {\n  border-radius: 15px;\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n  width: 600px;\n  max-width: 600px;\n  height: 900px;\n  background: #ffffff;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n}\n\n@media (max-width: 600px) {\n  .chatbot {\n    width: 80%;\n  }\n}\n\n.messages {\n  flex-grow: 1;\n  overflow-y: scroll;\n  padding: 20px;\n  background-color: #ffffff;\n}\n\n.select-restaurant {\n  width: 100%;\n  padding: 10px;\n  margin-bottom: 20px;\n  font-size: 16px;\n}\n\n.suggested-questions {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  padding: 10px;\n  background-color: #f5f5f5;\n}\n\n.suggested-questions button {\n  background-color: #324666;\n  color: #ffffff;\n  border: none;\n  border-radius: 8px;\n  padding: 10px;\n  margin: 5px;\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.message {\n  margin-bottom: 10px;\n  line-height: 1.6;\n  word-wrap: break-word;\n  font-size: 16px;\n}\n\n.message.user {\n  align-self: flex-end;\n  background-color: #0084FF;\n  color: #ffffff;\n  padding: 10px 15px;\n  border-radius: 15px 15px 3px 15px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n}\n\n.message.bot {\n  align-self: flex-start;\n  background-color: #E8E8E8;\n  color: #000000;\n  padding: 10px 15px;\n  border-radius: 15px 15px 15px 3px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n  margin-top: 10px;\n}\n\n.input-area {\n  display: flex;\n  padding: 10px;\n  border-top: 1px solid #E8E8E8;\n  background-color: #F5F5F5;\n}\n\n.input-area input {\n  flex-grow: 1;\n  border: none;\n  border-radius: 15px;\n  padding: 10px;\n  outline: none;\n  margin-right: 10px;\n}\n\n.input-area button {\n  background-color: #324666;\n  color: #ffffff;\n  border: none;\n  border-radius: 8px;\n  padding: 10px 20px;\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.select-restaurant {\n  margin: 20px;\n  width: 90%;\n  height: 30px;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  background-color: #f8f8f8;\n  padding: 5px;\n  font-size: 16px;\n  box-shadow: 0 3px 6px 1px rgba(0,0,0,0.16);\n}\n\n.label {\n  padding: 10px 10px;\n  font-size: 16px;\n  color: #333;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  background-color: #F5F5F5;\n  color: #333;\n}\n\n.chatbot {\n  border-radius: 15px;\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n  width: 600px;\n  max-width: 600px;\n  height: 900px;\n  background: #ffffff;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n}\n\n@media (max-width: 600px) {\n  .chatbot {\n    width: 80%;\n  }\n}\n\n.messages {\n  flex-grow: 1;\n  overflow-y: scroll;\n  padding: 20px;\n  background-color: #ffffff;\n}\n\n.select-restaurant {\n  width: 100%;\n  padding: 10px;\n  margin-bottom: 20px;\n  font-size: 16px;\n}\n\n.suggested-questions {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  padding: 10px;\n  background-color: #f5f5f5;\n}\n\n.suggested-questions button {\n  background-color: #324666;\n  color: #ffffff;\n  border: none;\n  border-radius: 8px;\n  padding: 10px;\n  margin: 5px;\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.message {\n  margin-bottom: 10px;\n  line-height: 1.6;\n  word-wrap: break-word;\n  font-size: 16px;\n}\n\n.message-container.user {\n  display: flex;\n  justify-content: flex-start;\n}\n\n.message-container.bot {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.message.user {\n  align-self: flex-start;\n  background-color: #0084FF;\n  color: #ffffff;\n  padding: 10px 15px;\n  border-radius: 15px 15px 15px 3px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n  margin-top: 10px;\n  text-align: left;\n}\n\n.message.bot {\n  align-self: flex-end;\n  background-color: #E8E8E8;\n  color: #000000;\n  padding: 10px 15px;\n  border-radius: 15px 15px 3px 15px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n  margin-top: 10px;\n  text-align: left;\n}\n\n\n.input-area {\n  display: flex;\n  padding: 10px;\n  border-top: 1px solid #E8E8E8;\n  background-color: #F5F5F5;\n}\n\n.input-area input {\n  flex-grow: 1;\n  border: none;\n  border-radius: 15px;\n  padding: 10px;\n  outline: none;\n  margin-right: 10px;\n}\n\n.input-area button {\n  background-color: #324666;\n  color: #ffffff;\n  border: none;\n  border-radius: 8px;\n  padding: 10px 20px;\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.select-restaurant {\n  margin: 20px;\n  width: 90%;\n  height: 30px;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  background-color: #f8f8f8;\n  padding: 5px;\n  font-size: 16px;\n  box-shadow: 0 3px 6px 1px rgba(0,0,0,0.16);\n}\n\n.label {\n  padding: 30px 30px 0 20px;\n  font-size: 16px;\n  color: #333;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4362,17 +4362,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var suggestedQuestions = [{
-  display: "Most popular dishes",
-  query: "What are the most popular dishes?"
-}, {
-  display: "Where to sit",
-  query: "Where's the best table?"
+  display: "Best dishes",
+  query: "What are the best dishes at {restaurant}?"
 }, {
   display: "Dishes to avoid",
-  query: "What dishes should I avoid?"
+  query: "What dishes should I avoid at {restaurant}?"
+}, {
+  display: "Where to sit",
+  query: "Where's the best table at {restaurant}?"
 }, {
   display: "Dress code",
-  query: "What's the dress code?"
+  query: "What's the dress code at {restaurant}?"
+}, {
+  display: "Tips",
+  query: "What are some tips and secrets about {restaurant}?"
 }];
 var Chatbot = function Chatbot() {
   var _useState = (0,react.useState)([]),
@@ -4466,7 +4469,8 @@ var Chatbot = function Chatbot() {
       key: index,
       className: "suggested-question",
       onClick: function onClick() {
-        setInput(question.query);
+        var modifiedQuery = question.query.replace('{restaurant}', selectedRestaurant);
+        setInput(modifiedQuery);
         sendMessage();
       }
     }, question.display);
@@ -4475,8 +4479,10 @@ var Chatbot = function Chatbot() {
   }, messages.map(function (message, index) {
     return /*#__PURE__*/react.createElement("div", {
       key: index,
+      className: "message-container ".concat(message.sender)
+    }, /*#__PURE__*/react.createElement("div", {
       className: "message ".concat(message.sender)
-    }, message.text);
+    }, message.text));
   }), /*#__PURE__*/react.createElement("div", {
     ref: messagesEndRef
   })), /*#__PURE__*/react.createElement("div", {

@@ -3,15 +3,8 @@ from llama_index.query_engine import RetrieverQueryEngine
 from llama_index.indices.postprocessor import SimilarityPostprocessor
 from llama_index import ResponseSynthesizer
 from llama_index.retrievers import VectorIndexRetriever
-from langchain.chat_models import ChatOpenAI
 
-
-# define LLM
-llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-4"))
-service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
-
-
-def answer_question(query, restaurant):
+def answer_question(query, restaurant, service_context):
   
   index = load_index_from_storage(
     StorageContext.from_defaults(persist_dir=f"storage/{restaurant}.txt"), service_context=service_context)

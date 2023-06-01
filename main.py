@@ -1,6 +1,10 @@
 from flask import Flask, request, send_from_directory
 import json
 from answer_questions import answer_question
+from langchain.chat_models import ChatOpenAI
+from llama_index import StorageContext, load_index_from_storage, GPTKeywordTableIndex, SimpleDirectoryReader, LLMPredictor, ServiceContext
+
+
 
 app = Flask(__name__)
 
@@ -23,9 +27,13 @@ def ask():
     restaurant = data['restaurant']
   
     last_message = transcript[-1]["text"]
-  
+
+  # define LLM
+    llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=1, model_name='gpt-4'))
+    service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
+
     # Call the answer_question function with last_message and restaurant as arguments
-    answer = answer_question(last_message, restaurant)
+    answer = answer_question(last_message, restaurant, service_context)
   
     return str(answer)
 

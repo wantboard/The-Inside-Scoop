@@ -2,7 +2,7 @@ from flask import Flask, request, send_from_directory
 import json
 from answer_questions import answer_question
 from langchain.chat_models import ChatOpenAI
-from llama_index import StorageContext, load_index_from_storage, GPTKeywordTableIndex, SimpleDirectoryReader, LLMPredictor, ServiceContext
+from llama_index import LLMPredictor, ServiceContext
 
 
 

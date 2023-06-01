@@ -4,7 +4,7 @@ from answer_questions import answer_question
 from langchain.chat_models import ChatOpenAI
 from llama_index import LLMPredictor, ServiceContext
 
-llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
+llm_selector = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
 
 app = Flask(__name__)
 
@@ -29,7 +29,7 @@ def ask():
     last_message = transcript[-1]["text"]
 
   # define LLM
-    llm_predictor = LLMPredictor(llm=llm)
+    llm_predictor = LLMPredictor(llm=llm_selector)
     service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
 
     # Call the answer_question function with last_message and restaurant as arguments

@@ -18,7 +18,7 @@
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Satisfy&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  background-color: #F5F5F5;\n  color: #555166;\n}\n\n.chatbot {\n  border-radius: 15px;\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n  width: 600px;\n  max-width: 600px;\n  height: 900px;\n  background: #ffffff;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n}\n\n@media (max-width: 600px) {\n  body {\n    padding-top: 10px;\n  }\n  .chatbot {\n    width: 100%;\n    height: 100vh;\n    border-radius: 0px;\n\n  }\n}\n.messages {\n  flex-grow: 1;\n  overflow-y: scroll;\n  padding: 20px;\n  background-color: #ffffff;\n}\n\n.select-restaurant {\n  width: 100%;\n  padding: 5px;\n  margin-bottom: 20px;\n  font-size: 16px;\n}\n\n.suggested-questions {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  padding: 10px;\n  background-color: #f5f5f5;\n}\n\n.suggested-questions button {\n  background-color: #555166;\n  color: #ffffff;\n  border: none;\n  border-radius: 15px;\n  padding: 10px 15px 10px 15px;\n  margin: 3px;\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.message {\n  margin-bottom: 10px;\n  line-height: 1.6;\n  word-wrap: break-word;\n  font-size: 16px;\n}\n\n.message-container.user {\n  display: flex;\n  justify-content: flex-start;\n}\n\n.message-container.bot {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.message.user {\n  align-self: flex-start;\n  background-color: #555166;\n  color: #ffffff;\n  padding: 10px 15px;\n  border-radius: 15px 15px 15px 3px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n  margin-top: 10px;\n  text-align: left;\n}\n\n.message.bot {\n  align-self: flex-end;\n  background-color: #E8E8E8;\n  color: #555166;\n  padding: 10px 15px;\n  border-radius: 15px 15px 3px 15px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n  margin-top: 10px;\n  text-align: left;\n}\n\n\n.input-area {\n  display: flex;\n  padding: 10px;\n  border-top: 1px solid #E8E8E8;\n  background-color: #F5F5F5;\n}\n\n.input-area input {\n  flex-grow: 1;\n  border: none;\n  border-radius: 15px;\n  padding: 10px;\n  outline: none;\n  margin-right: 10px;\n  font-size: 16px;\n}\n\n.input-area button {\n  background-color: #555166;\n  color: #ffffff;\n  border: none;\n  border-radius: 15px;\n  padding: 10px 20px;\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.select-restaurant {\n  margin: 0 20px 20px 20px; /* This removes the top margin */\n  width: 90%;\n  height: 30px;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  background-color: #f8f8f8;\n  padding: 5px;\n  font-size: 16px;\n  box-shadow: 0 3px 6px 1px rgba(0,0,0,0.16);\n  color: #555166;\n}\n\n\n.label {\n  padding: 20px 30px 5px 20px; /* Decrease the first value for top padding */\n  font-size: 16px;\n  color: #555166;\n  font-weight: bold; /* Makes the text bolder */\n}\n\n\n.header {\n  background-color: #6c5bb9;\n  color: #ffffff;\n  font-size: 18px;\n  padding: 2px;\n  text-align: center;\n  font-family: 'Satisfy', cursive;\n}\n\n.input-area input::placeholder {\n  font-size: 16px;\n}\n\n.input-area input::-webkit-input-placeholder { /* Chrome/Opera/Safari */\n  font-size: 16px;\n}\n.input-area input::-moz-placeholder { /* Firefox 19+ */\n  font-size: 16px;\n}\n.input-area input:-ms-input-placeholder { /* IE 10+ */\n  font-size: 16px;\n}\n.input-area input:-moz-placeholder { /* Firefox 18- */\n  font-size: 16px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  background-color: #F5F5F5;\n  color: #555166;\n}\n\n.chatbot {\n  border-radius: 15px;\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n  width: 600px;\n  max-width: 600px;\n  height: 900px;\n  background: #ffffff;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n}\n\n@media (max-width: 600px) {\n  body {\n    padding-top: 10px;\n  }\n  .chatbot {\n    width: 100%;\n    height: 100vh;\n    border-radius: 0px;\n\n  }\n}\n.messages {\n  flex-grow: 1;\n  overflow-y: scroll;\n  padding: 20px;\n  background-color: #ffffff;\n}\n\n.select-restaurant {\n  width: 100%;\n  padding: 5px;\n  margin-bottom: 20px;\n  font-size: 16px;\n}\n\n.suggested-questions {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  padding: 10px;\n  background-color: #f5f5f5;\n}\n\n.suggested-questions button {\n  background-color: #555166;\n  color: #ffffff;\n  border: none;\n  border-radius: 15px;\n  padding: 10px 15px 10px 15px;\n  margin: 3px;\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.message {\n  margin-bottom: 10px;\n  line-height: 1.6;\n  word-wrap: break-word;\n  font-size: 16px;\n}\n\n.message-container.user {\n  display: flex;\n  justify-content: flex-start;\n}\n\n.message-container.bot {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.message.user {\n  align-self: flex-start;\n  background-color: #555166;\n  color: #ffffff;\n  padding: 10px 15px;\n  border-radius: 15px 15px 15px 3px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n  margin-top: 10px;\n  text-align: left;\n}\n\n.message.bot {\n  align-self: flex-end;\n  background-color: #E8E8E8;\n  color: #555166;\n  padding: 10px 15px;\n  border-radius: 15px 15px 3px 15px;\n  width: 70%;\n  max-width: 100%;\n  margin-bottom: 10px;\n  margin-top: 10px;\n  text-align: left;\n}\n\n\n.input-area {\n  display: flex;\n  padding: 10px;\n  border-top: 1px solid #E8E8E8;\n  background-color: #F5F5F5;\n}\n\n.input-area input {\n  flex-grow: 1;\n  border: none;\n  border-radius: 15px;\n  padding: 10px;\n  outline: none;\n  margin-right: 10px;\n  font-size: 16px;\n}\n\n.input-area button {\n  background-color: #555166;\n  color: #ffffff;\n  border: none;\n  border-radius: 15px;\n  padding: 10px 20px;\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.select-restaurant {\n  margin: 0 20px 20px 20px; /* This removes the top margin */\n  width: 90%;\n  height: 30px;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  background-color: #f8f8f8;\n  padding: 5px;\n  font-size: 16px;\n  box-shadow: 0 3px 6px 1px rgba(0,0,0,0.16);\n  color: #555166;\n}\n\n/* Add this to your existing CSS file */\n.select-city {\n  margin: 0 20px 20px 20px;\n  width: 90%;\n  height: 30px;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  background-color: #f8f8f8;\n  padding: 5px;\n  font-size: 16px;\n  box-shadow: 0 3px 6px 1px rgba(0,0,0,0.16);\n  color: #555166;\n}\n\n\n.label {\n  padding: 20px 30px 5px 20px; /* Decrease the first value for top padding */\n  font-size: 16px;\n  color: #555166;\n  font-weight: bold; /* Makes the text bolder */\n}\n\n\n.header {\n  background-color: #6c5bb9;\n  color: #ffffff;\n  font-size: 18px;\n  padding: 2px;\n  text-align: center;\n  font-family: 'Satisfy', cursive;\n}\n\n.input-area input::placeholder {\n  font-size: 16px;\n}\n\n.input-area input::-webkit-input-placeholder { /* Chrome/Opera/Safari */\n  font-size: 16px;\n}\n.input-area input::-moz-placeholder { /* Firefox 19+ */\n  font-size: 16px;\n}\n.input-area input:-ms-input-placeholder { /* IE 10+ */\n  font-size: 16px;\n}\n.input-area input:-moz-placeholder { /* Firefox 18- */\n  font-size: 16px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4377,44 +4377,147 @@ var suggestedQuestions = [{
 }];
 var restaurants = [{
   value: "Alder",
-  display: "Alder"
+  display: "Alder",
+  city: "Toronto"
 }, {
   value: "BarRaval",
-  display: "Bar Raval"
+  display: "Bar Raval",
+  city: "Toronto"
 }, {
   value: "Black+Blue",
-  display: "Black + Blue"
+  display: "Black + Blue",
+  city: "Toronto"
 }, {
   value: "CurryishTavern",
-  display: "Curryish Tavern"
+  display: "Curryish Tavern",
+  city: "Toronto"
 }, {
   value: "Edulis",
-  display: "Edulis"
+  display: "Edulis",
+  city: "Toronto"
 }, {
   value: "FamigliaBaldassarre",
-  display: "Famiglia Baldassarre"
+  display: "Famiglia Baldassarre",
+  city: "Toronto"
 }, {
   value: "FishmanLobsterClubhouseRestaurant",
-  display: "Fishman Lobster Clubhouse Restaurant"
+  display: "Fishman Lobster Clubhouse Restaurant",
+  city: "Toronto"
 }, {
   value: "Gusto101",
-  display: "Gusto 101"
+  display: "Gusto 101",
+  city: "Toronto"
 }, {
   value: "MimiChinese",
-  display: "MIMI Chinese"
+  display: "MIMI Chinese",
+  city: "Toronto"
 }, {
   value: "PrimeSeafoodPalace",
-  display: "Prime Seafood Palace"
+  display: "Prime Seafood Palace",
+  city: "Toronto"
 }, {
   value: "Quetzal",
-  display: "Quetzal"
+  display: "Quetzal",
+  city: "Toronto"
 }, {
   value: "RamenButaNibo",
-  display: "Ramen Buta-Nibo"
+  display: "Ramen Buta-Nibo",
+  city: "Toronto"
+}, {
+  value: "Aska",
+  display: "Aska",
+  city: "Brooklyn"
+}, {
+  value: "CloverHill",
+  display: "Clover Hill",
+  city: "Brooklyn"
+}, {
+  value: "Eyval",
+  display: "Eyval",
+  city: "Brooklyn"
+}, {
+  value: "TheFourHoursemen",
+  display: "The Four Horsemen",
+  city: "Brooklyn"
+}, {
+  value: "Fluid",
+  display: "Fluid",
+  city: "Brooklyn"
+}, {
+  value: "Francie",
+  display: "Francie",
+  city: "Brooklyn"
+}, {
+  value: "LaserWolfBrooklyn",
+  display: "Laser Wolf Brooklyn",
+  city: "Brooklyn"
+}, {
+  value: "Lilia",
+  display: "Lilia",
+  city: "Brooklyn"
+}, {
+  value: "Lingo",
+  display: "Lingo",
+  city: "Brooklyn"
+}, {
+  value: "Lucali",
+  display: "Lucali",
+  city: "Brooklyn"
+}, {
+  value: "Misi",
+  display: "Misi",
+  city: "Brooklyn"
+}, {
+  value: "TheRiverCafe",
+  display: "The River Café",
+  city: "Brooklyn"
+}, {
+  value: "Beba",
+  display: "Beba",
+  city: "Montreal"
+}, {
+  value: "JoeBeef",
+  display: "JoeBeef",
+  city: "Montreal"
+}, {
+  value: "MaPouleMouillee",
+  display: "Ma Poule Mouillée",
+  city: "Montreal"
+}, {
+  value: "LeMousso",
+  display: "Le Mousso",
+  city: "Montreal"
+}, {
+  value: "LePasseCompose",
+  display: "Le Passé Composé",
+  city: "Montreal"
+}, {
+  value: "Pichai",
+  display: "Pichai",
+  city: "Montreal"
+}, {
+  value: "SchwartzsDeli",
+  display: "Schwartz's Deli",
+  city: "Montreal"
+}, {
+  value: "VinMonLapin",
+  display: "Vin Mon Lapin",
+  city: "Montreal"
 }
 // Add more options as necessary
 ];
 
+// cities list
+var cities = [{
+  value: "Toronto",
+  display: "Toronto"
+}, {
+  value: "Brooklyn",
+  display: "Brooklyn"
+}, {
+  value: "Montreal",
+  display: "Montréal"
+}];
 var Chatbot = function Chatbot() {
   var _useState = (0,react.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
@@ -4428,6 +4531,10 @@ var Chatbot = function Chatbot() {
     _useState6 = _slicedToArray(_useState5, 2),
     selectedRestaurant = _useState6[0],
     setSelectedRestaurant = _useState6[1];
+  var _useState7 = (0,react.useState)(cities[0]),
+    _useState8 = _slicedToArray(_useState7, 2),
+    selectedCity = _useState8[0],
+    setSelectedCity = _useState8[1];
   var messagesEndRef = (0,react.useRef)(null);
   var scrollToBottom = function scrollToBottom() {
     var _messagesEndRef$curre;
@@ -4436,38 +4543,40 @@ var Chatbot = function Chatbot() {
     });
   };
   (0,react.useEffect)(scrollToBottom, [messages]);
+
+  // select the first restaurant in the selected city as the default restaurant
+  (0,react.useEffect)(function () {
+    setSelectedRestaurant(restaurants.find(function (restaurant) {
+      return restaurant.city === selectedCity.value;
+    }));
+  }, [selectedCity]);
   var sendMessage = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var message,
-        newMessages,
-        response,
-        botMessage,
-        _args = arguments;
+    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(query) {
+      var newMessages, response, botMessage;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            message = _args.length > 0 && _args[0] !== undefined ? _args[0] : input;
-            if (!(message.trim() === '')) {
-              _context.next = 3;
+            if (!(query.trim() === '')) {
+              _context.next = 2;
               break;
             }
             return _context.abrupt("return");
-          case 3:
+          case 2:
             newMessages = [].concat(_toConsumableArray(messages), [{
               sender: 'user',
-              text: message
+              text: query
             }]);
             setMessages(newMessages);
             setInput('');
-            _context.prev = 6;
-            _context.next = 9;
+            _context.prev = 5;
+            _context.next = 8;
             return lib_axios.post('/ask', {
               restaurant: selectedRestaurant.value,
               transcript: newMessages
             }, {
               withCredentials: true
             });
-          case 9:
+          case 8:
             response = _context.sent;
             botMessage = response.data;
             setMessages(function (prevMessages) {
@@ -4476,19 +4585,19 @@ var Chatbot = function Chatbot() {
                 text: botMessage
               }]);
             });
-            _context.next = 17;
+            _context.next = 16;
             break;
-          case 14:
-            _context.prev = 14;
-            _context.t0 = _context["catch"](6);
+          case 13:
+            _context.prev = 13;
+            _context.t0 = _context["catch"](5);
             console.error('Error sending message:', _context.t0);
-          case 17:
+          case 16:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[6, 14]]);
+      }, _callee, null, [[5, 13]]);
     }));
-    return function sendMessage() {
+    return function sendMessage(_x2) {
       return _ref.apply(this, arguments);
     };
   }();
@@ -4498,14 +4607,30 @@ var Chatbot = function Chatbot() {
     className: "header"
   }, /*#__PURE__*/react.createElement("h1", null, "The Inside Scoop")), /*#__PURE__*/react.createElement("label", {
     className: "label"
-  }, "Select a Restaurant"), /*#__PURE__*/react.createElement("select", {
+  }, "City"), /*#__PURE__*/react.createElement("select", {
+    className: "select-city",
+    onChange: function onChange(e) {
+      return setSelectedCity(cities.find(function (city) {
+        return city.value === e.target.value;
+      }));
+    }
+  }, cities.map(function (city, index) {
+    return /*#__PURE__*/react.createElement("option", {
+      key: index,
+      value: city.value
+    }, city.display);
+  })), /*#__PURE__*/react.createElement("label", {
+    className: "label"
+  }, "Restaurant"), /*#__PURE__*/react.createElement("select", {
     className: "select-restaurant",
     onChange: function onChange(e) {
       return setSelectedRestaurant(restaurants.find(function (restaurant) {
-        return restaurant.value === e.target.value;
+        return restaurant.value === e.target.value && restaurant.city === selectedCity.value;
       }));
     }
-  }, restaurants.map(function (restaurant, index) {
+  }, restaurants.filter(function (restaurant) {
+    return restaurant.city === selectedCity.value;
+  }).map(function (restaurant, index) {
     return /*#__PURE__*/react.createElement("option", {
       key: index,
       value: restaurant.value
@@ -4542,11 +4667,13 @@ var Chatbot = function Chatbot() {
       return setInput(e.target.value);
     },
     onKeyPress: function onKeyPress(e) {
-      return e.key === 'Enter' && sendMessage();
+      return e.key === 'Enter' && sendMessage(input);
     },
     placeholder: "Ask a question about ".concat(selectedRestaurant.display, " . . .")
   }), /*#__PURE__*/react.createElement("button", {
-    onClick: sendMessage
+    onClick: function onClick() {
+      return sendMessage(input);
+    }
   }, /*#__PURE__*/react.createElement("i", {
     className: "material-icons"
   }, "send"))));

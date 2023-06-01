@@ -37,10 +37,10 @@ const Chatbot = () => {
 
   useEffect(scrollToBottom, [messages]);
 
-  const sendMessage = async () => {
-    if (input.trim() === '') return;
+  const sendMessage = async (message = input) => {
+    if (message.trim() === '') return;
 
-    const newMessages = [...messages, { sender: 'user', text: input }];
+    const newMessages = [...messages, { sender: 'user', text: message }];
     setMessages(newMessages);
     setInput('');
 
@@ -70,7 +70,7 @@ const Chatbot = () => {
           <button key={index} className="suggested-question" onClick={() => {
             const modifiedQuery = question.query.replace('{restaurant}', selectedRestaurant.display);
             setInput(modifiedQuery);
-            sendMessage();
+            sendMessage(modifiedQuery);
           }}>
             {question.display}
           </button>

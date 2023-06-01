@@ -7,6 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <script>
+  function fillInput(text) {
+    var inputField = document.getElementById('inputField');
+    inputField.value = text;
+    
+    var submitButton = document.getElementById('submitButton');
+    submitButton.click();  // This will emulate the click event on the submit button
+  }
+</script>
 </head>
 <body>
   <div id="root"></div>

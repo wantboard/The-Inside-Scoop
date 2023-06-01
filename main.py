@@ -28,7 +28,7 @@ def ask():
   
     last_message = transcript[-1]["text"]
 
-  # define LLM
+    # define LLM
     llm_predictor = LLMPredictor(llm=llm_selector)
     service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
 

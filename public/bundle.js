@@ -4438,31 +4438,36 @@ var Chatbot = function Chatbot() {
   (0,react.useEffect)(scrollToBottom, [messages]);
   var sendMessage = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var newMessages, response, botMessage;
+      var message,
+        newMessages,
+        response,
+        botMessage,
+        _args = arguments;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            if (!(input.trim() === '')) {
-              _context.next = 2;
+            message = _args.length > 0 && _args[0] !== undefined ? _args[0] : input;
+            if (!(message.trim() === '')) {
+              _context.next = 3;
               break;
             }
             return _context.abrupt("return");
-          case 2:
+          case 3:
             newMessages = [].concat(_toConsumableArray(messages), [{
               sender: 'user',
-              text: input
+              text: message
             }]);
             setMessages(newMessages);
             setInput('');
-            _context.prev = 5;
-            _context.next = 8;
+            _context.prev = 6;
+            _context.next = 9;
             return lib_axios.post('/ask', {
               restaurant: selectedRestaurant.value,
               transcript: newMessages
             }, {
               withCredentials: true
             });
-          case 8:
+          case 9:
             response = _context.sent;
             botMessage = response.data;
             setMessages(function (prevMessages) {
@@ -4471,17 +4476,17 @@ var Chatbot = function Chatbot() {
                 text: botMessage
               }]);
             });
-            _context.next = 16;
+            _context.next = 17;
             break;
-          case 13:
-            _context.prev = 13;
-            _context.t0 = _context["catch"](5);
+          case 14:
+            _context.prev = 14;
+            _context.t0 = _context["catch"](6);
             console.error('Error sending message:', _context.t0);
-          case 16:
+          case 17:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[5, 13]]);
+      }, _callee, null, [[6, 14]]);
     }));
     return function sendMessage() {
       return _ref.apply(this, arguments);
@@ -4514,7 +4519,7 @@ var Chatbot = function Chatbot() {
       onClick: function onClick() {
         var modifiedQuery = question.query.replace('{restaurant}', selectedRestaurant.display);
         setInput(modifiedQuery);
-        sendMessage();
+        sendMessage(modifiedQuery);
       }
     }, question.display);
   })), /*#__PURE__*/react.createElement("div", {

@@ -30,11 +30,14 @@ body {
 }
 
 @media (max-width: 600px) {
+  body {
+    padding-top: 10px;
+  }
   .chatbot {
-    width: 80%;
+    width: 100%;
+    height: 100vh;
   }
 }
-
 .messages {
   flex-grow: 1;
   overflow-y: scroll;

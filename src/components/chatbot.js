@@ -4,9 +4,8 @@ import axios from 'axios';
 const suggestedQuestions = [
   { display: "Best dishes", query: "What are the best dishes at {restaurant}?" },
   { display: "Dishes to avoid", query: "What dishes should I avoid at {restaurant}?" },
-  { display: "Where to sit", query: "Where's the best table at {restaurant}?" },
   { display: "Dress code", query: "What's the dress code at {restaurant}?" },
-  { display: "Tips", query: "What are some tips and secrets about {restaurant}?" },  
+  { display: "The inside scoop", query: "What are some tips and secrets about {restaurant}?" },  
 ];
 
 const restaurants = [

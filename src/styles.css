@@ -52,8 +52,6 @@ body {
     text-align: center; /* Keeps text in the center */
   }
 }
-  
-}
 .messages {
   flex-grow: 1;
   overflow-y: scroll;

@@ -1,5 +1,6 @@
 from flask import Flask, request, send_from_directory
 import json
+from create_knowledge_base import construct_base_from_directory
 from answer_questions import answer_question
 from langchain.chat_models import ChatOpenAI
 from llama_index import LLMPredictor, ServiceContext
@@ -7,7 +8,7 @@ import os
 my_secret = os.environ['OPENAI_API_KEY']
 
 
-llm_selector = llm=ChatOpenAI(temperature=0, model_name="gpt-4", streaming=True)
+llm_selector = llm=ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo", streaming=True)
 
 app = Flask(__name__)
 
@@ -49,6 +50,5 @@ def error(e):
     return "error! " + str(e)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
-
-#construct_base_from_directory("data")
+     app.run(host='0.0.0.0')
+     #construct_base_from_directory("data")

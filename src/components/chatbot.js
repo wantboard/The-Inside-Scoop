@@ -24,8 +24,7 @@ const restaurants = [
   { value: "Aska", display: "Aska", city: "Brooklyn" },
   { value: "CloverHill", display: "Clover Hill", city: "Brooklyn" },
   { value: "Eyval", display: "Eyval", city: "Brooklyn" },
-  { value: "TheFourHoursemen", display: "The Four Horsemen", city: "Brooklyn" },
-  { value: "Fluid", display: "Fluid", city: "Brooklyn" },
+  { value: "TheFourHorsemen", display: "The Four Horsemen", city: "Brooklyn" },
   { value: "Francie", display: "Francie", city: "Brooklyn" },
   { value: "LaserWolfBrooklyn", display: "Laser Wolf Brooklyn", city: "Brooklyn" },
   { value: "Lilia", display: "Lilia", city: "Brooklyn" },
@@ -36,7 +35,6 @@ const restaurants = [
   { value: "Beba", display: "Beba", city: "Montreal" },
   { value: "JoeBeef", display: "Joe Beef", city: "Montreal" },
   { value: "MaPouleMouillee", display: "Ma Poule Mouillée", city: "Montreal" },
-  { value: "LeMousso", display: "Le Mousso", city: "Montreal" },  
   { value: "LePasseCompose", display: "Le Passé Composé", city: "Montreal" },
   { value: "Pichai", display: "Pichai", city: "Montreal" },
   { value: "SchwartzsDeli", display: "Schwartz's Deli", city: "Montreal" },
@@ -46,9 +44,9 @@ const restaurants = [
 
 // cities list
 const cities = [
-  { value: "Toronto", display: "Toronto" },
   { value: "Brooklyn", display: "Brooklyn" },
   { value: "Montreal", display: "Montréal" },
+  { value: "Toronto", display: "Toronto" },
 ];
 
 const Chatbot = () => {

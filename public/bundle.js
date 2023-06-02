@@ -4436,12 +4436,8 @@ var restaurants = [{
   display: "Eyval",
   city: "Brooklyn"
 }, {
-  value: "TheFourHoursemen",
+  value: "TheFourHorsemen",
   display: "The Four Horsemen",
-  city: "Brooklyn"
-}, {
-  value: "Fluid",
-  display: "Fluid",
   city: "Brooklyn"
 }, {
   value: "Francie",
@@ -4477,15 +4473,11 @@ var restaurants = [{
   city: "Montreal"
 }, {
   value: "JoeBeef",
-  display: "JoeBeef",
+  display: "Joe Beef",
   city: "Montreal"
 }, {
   value: "MaPouleMouillee",
   display: "Ma Poule Mouillée",
-  city: "Montreal"
-}, {
-  value: "LeMousso",
-  display: "Le Mousso",
   city: "Montreal"
 }, {
   value: "LePasseCompose",
@@ -4509,14 +4501,14 @@ var restaurants = [{
 
 // cities list
 var cities = [{
-  value: "Toronto",
-  display: "Toronto"
-}, {
   value: "Brooklyn",
   display: "Brooklyn"
 }, {
   value: "Montreal",
   display: "Montréal"
+}, {
+  value: "Toronto",
+  display: "Toronto"
 }];
 var Chatbot = function Chatbot() {
   var _useState = (0,react.useState)([]),

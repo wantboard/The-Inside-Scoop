@@ -13,6 +13,7 @@ def answer_question(query, restaurant, service_context):
   retriever = VectorIndexRetriever(
       index=index, 
       similarity_top_k=2,
+      streaming=True,
   )
 
   # configure response synthesizer

@@ -12,7 +12,7 @@ def answer_question(query, restaurant, service_context):
   # configure retriever
   retriever = VectorIndexRetriever(
       index=index, 
-      similarity_top_k=2,
+      similarity_top_k=3,
       streaming=True,
   )
 

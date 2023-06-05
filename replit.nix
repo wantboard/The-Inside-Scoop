@@ -1,5 +1,6 @@
 { pkgs }: {
   deps = [
+    pkgs.heroku
     pkgs.mastodon
     pkgs.nodejs-16_x
     pkgs.yarn

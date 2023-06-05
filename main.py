@@ -35,8 +35,7 @@ def ask():
     # define LLM
     llm_predictor = LLMPredictor(llm=llm_selector)
     service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
-    print(llm_selector)
-    print(llm_predictor)
+
     # Call the answer_question function with last_message and restaurant as arguments
     answer = answer_question(last_message, restaurant, service_context)
   

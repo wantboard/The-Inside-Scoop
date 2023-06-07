@@ -35,7 +35,6 @@ langchain==0.0.169
 llama-index==0.6.1
 lockfile==0.12.2
 lxml==4.9.2
-MarkupSafe==2.1.2
 marshmallow==3.19.0
 marshmallow-enum==1.5.1
 msgpack==1.0.4

@@ -72,7 +72,6 @@ requests-toolbelt==0.9.1
 rfc3986==1.5.0
 sanic==22.6.1
 secretstorage==3.3.1
-six==1.17.0
 SQLAlchemy==2.1.0
 starlette==0.17.2
 tldextract==3.3.0

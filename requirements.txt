@@ -71,7 +71,6 @@ requests==2.29.0
 requests-toolbelt==0.9.1
 rfc3986==1.5.0
 sanic==22.6.1
-sanic-routing==1.0.1
 secretstorage==3.3.1
 sentry-sdk==2.8.0
 six==1.17.0

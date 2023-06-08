@@ -74,7 +74,6 @@ sanic==22.6.1
 secretstorage==3.3.1
 tldextract==3.3.0
 tox==3.28.0
-types-setuptools==59.4.0
 types-toml==0.2.0
 typing-extensions==5.0.0
 ujson==4.3.1

@@ -1,17 +1,16 @@
 from flask import Flask, request, send_from_directory
-from flask_talisman import Talisman  # new import
 import json
 from create_knowledge_base import construct_base_from_directory
 from answer_questions import answer_question
 from langchain.chat_models import ChatOpenAI
 from llama_index import LLMPredictor, ServiceContext
 import os
+
 my_secret = os.environ['OPENAI_API_KEY']
 
-llm_selector = llm=ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo", streaming=True)
+llm_selector = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo", streaming=True)
 
 app = Flask(__name__)
-talisman = Talisman(app)  # new line
 
 @app.route('/<path:path>')
 def serve_static(path):
@@ -51,4 +50,3 @@ def error(e):
 if __name__ == "__main__":
      app.run(host='0.0.0.0')
      #construct_base_from_directory("data")
-

@@ -1,20 +1,6 @@
 const express = require('express');
-const helmet = require('helmet');
 const path = require('path');
 const app = express();
-
-// Add helmet middleware for security headers
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"], // Allows inline styles
-      scriptSrc: ["'self'", "'unsafe-inline'"], // Allows inline scripts
-      imgSrc: ["'self'", "data:", "https://images.example.com"],
-      // Add other sources you want to allow
-    },
-  },
-}));
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'build')));
@@ -30,3 +16,42 @@ app.listen(port);
 
 console.log(`Server listening on ${port}`);
 
+
+Here's my webpack.config.js:
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  entry: './src/index.js',
+  optimization: {
+    minimize: false
+  },
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html', // Change this to your source html file if it's different
+      filename: './index.html'
+    })
+  ]
+};

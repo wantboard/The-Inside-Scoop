@@ -5,10 +5,10 @@ from answer_questions import answer_question
 from langchain.chat_models import ChatOpenAI
 from llama_index import LLMPredictor, ServiceContext
 import os
-
 my_secret = os.environ['OPENAI_API_KEY']
 
-llm_selector = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo", streaming=True)
+
+llm_selector = llm=ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo", streaming=True)
 
 app = Flask(__name__)
 
@@ -40,6 +40,7 @@ def ask():
     answer = answer_question(last_message, restaurant, service_context)
   
     return str(answer)
+    
 
 @app.errorhandler(Exception)
 def error(e):

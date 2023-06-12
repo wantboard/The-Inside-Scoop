@@ -1872,6 +1872,11 @@
   "resolved" "https://registry.npmjs.org/he/-/he-1.2.0.tgz"
   "version" "1.2.0"
 
+"helmet@^7.0.0":
+  "integrity" "sha512-MsIgYmdBh460ZZ8cJC81q4XJknjG567wzEmv46WOBblDb6TUd3z8/GhgmsM9pn8g2B80tAJ4m5/d3Bi1KrSUBQ=="
+  "resolved" "https://registry.npmjs.org/helmet/-/helmet-7.0.0.tgz"
+  "version" "7.0.0"
+
 "html-minifier-terser@^6.0.2":
   "integrity" "sha512-YXxSlJBZTP7RS3tWnQw74ooKa6L9b9i9QYXY21eUEvhZ3u9XLfv6OnFsQq6RxkhHygsaUMvYsZRV5rU/OVNZxw=="
   "resolved" "https://registry.npmjs.org/html-minifier-terser/-/html-minifier-terser-6.1.0.tgz"

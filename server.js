@@ -1,6 +1,20 @@
 const express = require('express');
+const helmet = require('helmet');
 const path = require('path');
 const app = express();
+
+// Add helmet middleware for security headers
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "https://fonts.googleapis.com"],
+      scriptSrc: ["'self'", "'unsafe-inline'"], // Allows inline scripts
+      imgSrc: ["'self'", "data:", "https://images.example.com"],
+      // Add other sources you want to allow
+    },
+  },
+}));
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'build')));
@@ -15,3 +29,4 @@ const port = process.env.PORT || 5000;
 app.listen(port);
 
 console.log(`Server listening on ${port}`);
+

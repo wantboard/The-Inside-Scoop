@@ -1885,10 +1885,10 @@
     "relateurl" "^0.2.7"
     "terser" "^5.10.0"
 
-"html-webpack-plugin@^5.5.0":
-  "integrity" "sha512-cTUzZ1+NqjGEKjmVgZKLMdiFg3m9MdRXkZW2OEe69WYVi5ONLMmlnSZdXzGGMOq0C8jGDrL6EWyEDDUioHO/pA=="
-  "resolved" "https://registry.npmjs.org/html-webpack-plugin/-/html-webpack-plugin-5.5.1.tgz"
-  "version" "5.5.1"
+"html-webpack-plugin@^5.5.3":
+  "integrity" "sha512-6YrDKTuqaP/TquFH7h4srYWsZx+x6k6+FbsTm0ziCwGHDP78Unr1r9F/H4+sGmMbX08GQcJ+K64x55b+7VM/jg=="
+  "resolved" "https://registry.npmjs.org/html-webpack-plugin/-/html-webpack-plugin-5.5.3.tgz"
+  "version" "5.5.3"
   dependencies:
     "@types/html-minifier-terser" "^6.0.0"
     "html-minifier-terser" "^6.0.2"

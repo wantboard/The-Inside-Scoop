@@ -8,7 +8,7 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "https://fonts.googleapis.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"], // Allows inline styles
       scriptSrc: ["'self'", "'unsafe-inline'"], // Allows inline scripts
       imgSrc: ["'self'", "data:", "https://images.example.com"],
       // Add other sources you want to allow

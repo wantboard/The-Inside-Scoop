@@ -20,6 +20,7 @@ dataclasses-json==0.5.7
 distlib==0.3.6
 filelock==3.9.0
 Flask==2.2.2
+flask_talisman
 gptcache==0.1.19
 greenlet==2.0.2
 gunicorn==20.1.0

@@ -45,7 +45,7 @@ numexpr==2.8.4
 numpy==1.24.1
 openai==0.27.4
 openapi-schema-pydantic==1.2.4
-packaging==23.0
+packaging
 pandas==2.0.1
 parso==0.8.3
 passlib==1.7.4
